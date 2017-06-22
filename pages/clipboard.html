@@ -1,0 +1,53 @@
+<md-toolbar class="md-whiteframe-4dp">
+    <div class="md-toolbar-tools">
+        <md-button class="menu md-icon-button" hide-gt-sm ng-click="toggleSidenav()" aria-label="Show Sidenav">
+            <md-icon md-svg-src="img/menu.svg"></md-icon>
+        </md-button>
+        <h1 flex md-truncate>RT Clipboard</h1>
+        <md-button class="md-icon-button" aria-label="Settings" ng-click='showPrompt()'>
+            <md-icon md-svg-icon="img/add.svg"></md-icon>
+        </md-button>
+        <a href="/fgdfgd" class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <md-icon md-svg-icon="img/github-logo.svg"></md-icon>
+        </a>
+    </div>
+</md-toolbar>
+<div flex layout="row">
+    <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left">
+        <div layout-padding layout="column" class="profile-photo__container">
+            <div layout="row">
+                <img ng-src={{photo}} class="profile-photo">
+                <div layout="row" flex layout-align="end start">
+                    <md-button class="md-icon-button" aria-label="Signout" ng-click="signout()">
+                        <md-icon md-svg-icon="img/lock_w.svg"></md-icon>
+                    </md-button>
+                </div>
+            </div>
+            <span flex class="md-headline user-name">{{name}}</span>
+        </div>
+        <!--<md-list>
+            <md-list-item ng-click="null">
+                <md-icon md-svg-src="img/github-circle.svg"></md-icon>
+                See on Github
+            </md-list-item>
+        </md-list>-->
+    </md-sidenav>
+    <md-content flex layout-padding>
+        <h2 ng-hide="clips.length > 0" class="empty-state">Why you no paste? &#9785</h2>
+        <md-card ng-repeat="clip in clips | orderBy :'-datecreated'" class="cards">
+            <md-card-header>
+                <md-card-header-text>
+                    <md-headline>{{clip.datecreated | date}} at {{clip.datecreated | date: 'shortTime'}}</md-headline>
+                </md-card-header-text>
+            </md-card-header>
+            <md-card-content>
+                <p>{{clip.cliptext}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button class="menu md-icon-button" aria-label="Delete" ng-click="deleteClip(clip)">
+                    <md-icon md-svg-src="img/delete.svg"></md-icon>
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </md-content>
+</div>

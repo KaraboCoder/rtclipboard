@@ -1,0 +1,74 @@
+/* app css stylesheet */
+
+@import "css/animate.css";
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    background-color: #2991c4;
+    width: 100vw;
+    height: 100vh;
+}
+
+.view.ng-enter {
+    animation: slideInRight 0.3s;
+}
+
+.view.ng-leave {
+    /*animation: slideOutRight 1s;*/
+}
+
+.cards.ng-enter {
+    animation: slideInRight 0.3s;
+}
+
+.cards.ng-leave {
+    animation: slideOutRight 0.3s;
+}
+
+.cards {
+    overflow-wrap: break-word;
+}
+
+md-toolbar {
+    background-color: rgb(253, 86, 89) !important;
+}
+
+.profile-photo__container {
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-name {
+    color: #fff;
+}
+
+.login-page__bg {
+    background-color: rgb(253, 86, 89);
+}
+
+.md-fab {
+    background-color: #2196F3 !important;
+}
+
+md-list-item md-icon {
+    margin-left: 0 !important;
+}
+
+.empty-state {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 100px;
+}
