@@ -14,3 +14,6 @@ I used angular ui-router to switch users between the login page and their clipbo
 
 The clipboard is already functioning, you can paste your stuff in one computer and it will almost instantly appear in another device.
 The app is web-based so you can use it on any device.
+
+# TRY IT LIVE HERE
+https://karabocoder.github.io/rtclipboard
