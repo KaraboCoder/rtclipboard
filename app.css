@@ -59,6 +59,13 @@ md-toolbar {
     background-color: rgb(253, 86, 89);
 }
 
+.rt_top {
+    text-align: center;
+    color: #fff;
+    font-family: cursive;
+    padding-top: 20%;
+}
+
 .md-fab {
     background-color: #2196F3 !important;
 }
