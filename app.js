@@ -60,6 +60,7 @@ angular.module('realtime_clipboard')
 
 
     .controller('ClipboardController', ['$scope', 'CurrentAuth', '$state', 'Auth', '$mdSidenav', '$mdDialog', '$firebaseArray', function ($scope, CurrentAuth, $state, Auth, $mdSidenav, $mdDialog, $firebaseArray) {
+		console.log(CurrentAuth);
         $scope.photo = CurrentAuth.photoURL;
         $scope.name = CurrentAuth.displayName;
         $scope.email = CurrentAuth.email;
