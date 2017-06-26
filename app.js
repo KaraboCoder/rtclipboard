@@ -68,7 +68,7 @@ angular.module('realtime_clipboard')
             Auth.$signOut();
         }
 
-        var dbref = firebase.database().ref().child('clips').child(CurrentAuth.uid);
+        var dbref = firebase.database().ref().child(CurrentAuth.uid);
         $scope.clips = $firebaseArray(dbref);
 
         $scope.toggleSidenav = function () {
